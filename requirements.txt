@@ -1,0 +1,5 @@
+streamlit==1.40.0
+pandas==2.2.3
+pydantic==2.10.1
+sqlalchemy==2.0.36
+sqlmodel==0.0.22
