@@ -20,12 +20,12 @@ class Talent(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     name: str = Field(default=None, index=True)
     source: Source = Field(default=None, index=True)
-    requirements: str | None = Field(default=None, index=True) #TO DO: MANY TO MANY WITH REQUIREMENTS
+    requirements: str | None = Field(default=None, index=True)
     flavor: str = Field(default=None, index=True)
     text: str = Field(default=None, index=True)
 
 sqlite_file_name = "database.db"
-sqlite_url = f"sqlite:///db/{sqlite_file_name}" #USE ENV VAR?
+sqlite_url = f"sqlite:///db/{sqlite_file_name}"
 
 engine = create_engine(sqlite_url)
 
@@ -76,8 +76,10 @@ def reset():
     submit = False
 
 if __name__ == '__main__':
-    st.set_page_config(layout="wide")
+    st.set_page_config(page_title='Сборник талантов', page_icon='./public/dune_logo.ico', layout="wide")
+
     st.title('Сборник талантов игры Дюна: Приключения в Империи')
+
     st.sidebar.header('Поиск талантов')
     with st.sidebar.form('Поиск талантов'):
         name = st.text_input('Название', key='name')
