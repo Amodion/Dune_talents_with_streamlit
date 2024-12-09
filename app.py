@@ -76,7 +76,11 @@ def reset():
     submit = False
 
 if __name__ == '__main__':
-    st.set_page_config(page_title='Сборник талантов', page_icon='./public/dune_logo.ico', layout="wide")
+    st.set_page_config(
+        page_title='Сборник талантов',
+        page_icon='/public/dune_logo.ico',
+        layout="wide"
+        )
 
     st.title('Сборник талантов игры Дюна: Приключения в Империи')
 
