@@ -78,7 +78,7 @@ def reset():
 if __name__ == '__main__':
     st.set_page_config(
         page_title='Сборник талантов',
-        page_icon='/public/dune_logo.ico',
+        page_icon='./public/dune_logo.png',
         layout="wide"
         )
 
